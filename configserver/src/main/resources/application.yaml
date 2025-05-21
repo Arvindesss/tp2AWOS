@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: native
+  application:
+    name: configServer
+
+#  security:
+#    user:
+#      name: root
+#      password: s3cr3t
+
+server.port: 8888
+
+spring.cloud.config.server.native.searchLocations: C:\Users\arvin\Desktop\WS\config-repo
+
+# WARNING: Exposing all management endpoints over http should only be used during development, must be locked down in production!
+management.endpoint.health.show-details: ALWAYS
+management.endpoints.web.exposure.include: "*"
+
+logging:
+  level:
+    root: info
+
+#---
+#spring.config.activate.on-profile: docker
+#spring.cloud.config.server.native.searchLocations: file:///${user.home}/config-repo
